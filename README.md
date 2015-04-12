@@ -1,17 +1,17 @@
-java-bitpay-client
+java-com.bitpay-client
 ==================
 
-This is the Java client library for the BitPay Payment Gateway.  This library implements BitPay's [Cryptographically Secure RESTful API](https://bitpay.com/api).
+This is the Java client library for the BitPay Payment Gateway.  This library implements BitPay's [Cryptographically Secure RESTful API](https://com.bitpay.com/api).
 
 ## Quick Start Guide
 
-To get up and running with our Java library quickly, see the GUIDE here: https://github.com/bitpay/java-bitpay-client/blob/master/GUIDE.md
+To get up and running with our Java library quickly, see the GUIDE here: https://github.com/com.bitpay/java-com.bitpay-client/blob/master/GUIDE.md
 
 ## Support
 
-* https://labs.bitpay.com/c/libraries/java
-* https://github.com/bitpay/java-bitpay-client/issues
-* https://support.bitpay.com/
+* https://labs.com.bitpay.com/c/libraries/java
+* https://github.com/com.bitpay/java-com.bitpay-client/issues
+* https://support.com.bitpay.com/
 
 ## Contribute
 
