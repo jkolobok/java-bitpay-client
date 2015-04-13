@@ -471,7 +471,7 @@ public class BitPay {
 
                 String signature = KeyUtils.sign(_ecKey, fullURL);
 
-                get.addHeader("x-com.bitpay-plugin-info", BITPAY_PLUGIN_INFO);
+                get.addHeader("x-bitpay-plugin-info", BITPAY_PLUGIN_INFO);
                 get.addHeader("x-accept-version", BITPAY_API_VERSION);
                 get.addHeader("x-signature", signature);
                 get.addHeader("x-identity", KeyUtils.bytesToHex(_ecKey.getPubKey()));

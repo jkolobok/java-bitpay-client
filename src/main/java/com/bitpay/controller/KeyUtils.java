@@ -48,31 +48,28 @@ public class KeyUtils {
 
     public static ECKey loadEcKey() throws IOException
     {
-        FileInputStream fileInputStream = null;
         File file = new File(PRIV_KEY_FILENAME);
 
         byte[] bytes = new byte[(int) file.length()];
-
-        fileInputStream = new FileInputStream(file);
-        fileInputStream.read(bytes);
-        fileInputStream.close();
+        DataInputStream data = new DataInputStream(new FileInputStream(file));
+        data.readFully(bytes);
+        data.close();
 
         ECKey key = ECKey.fromASN1(bytes);
 
         return key;
     }
 
-    public static String getKeyStringFromFile(String filename) throws IOException
+    public static String getKeyStringFromFile(String filename)
     {
-        BufferedReader br;
 
-        br = new BufferedReader(new FileReader(filename));
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))){
 
-        String line = br.readLine();
-
-        br.close();
-
-        return line;
+            return br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static void saveEcKey(ECKey ecKey) throws IOException
