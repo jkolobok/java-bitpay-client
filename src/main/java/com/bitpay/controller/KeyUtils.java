@@ -13,7 +13,7 @@ import java.math.BigInteger;
 public class KeyUtils {
 
     final private static char[] hexArray = "0123456789abcdef".toCharArray();
-    final private static String PRIV_KEY_FILENAME = "bitpay_private.key";
+    final private static String PRIV_KEY_FILENAME = System.getProperty("user.home")+"/bitpay_private.key";
     
     public KeyUtils() {}
     

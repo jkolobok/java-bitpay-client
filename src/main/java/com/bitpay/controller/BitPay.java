@@ -82,7 +82,7 @@ public class BitPay {
         try {
             this.initKeys();
         } catch (IOException e) {
-            throw new BitPayException("Error: failed to intialize public/private key pair\n" + e.getMessage());
+            throw new BitPayException("Error: failed to intialize public/private key pair\n" + e.getMessage(), e);
         }
 
         this.deriveIdentity();
